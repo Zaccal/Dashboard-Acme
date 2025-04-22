@@ -1,17 +1,20 @@
 "use client";
+import {
+  DocumentDuplicateIcon,
+  UserGroupIcon,
+  HomeIcon,
+} from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-interface ILink {
-  href: string;
-  title: string;
-}
-
-const links: ILink[] = [
+const links = [
+  { name: "Home", href: "/dashboard", icon: HomeIcon },
   {
-    href: "#",
-    title: "test",
+    name: "Invoices",
+    href: "/dashboard/invoices",
+    icon: DocumentDuplicateIcon,
   },
+  { name: "Customers", href: "/dashboard/customers", icon: UserGroupIcon },
 ];
 
 function NavLinks() {
@@ -19,11 +22,19 @@ function NavLinks() {
 
   return (
     <>
-      {links.map((data) => (
-        <Link key={data.title} href={data.href}>
-          <p className="hidden md:block">{data.title}</p>
-        </Link>
-      ))}
+      {links.map((data) => {
+        const LinkIcon = data.icon;
+        return (
+          <Link
+            className="flex h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3"
+            key={data.name}
+            href={data.href}
+          >
+            <LinkIcon className="w-6" />
+            <p className="hidden md:block">{data.name}</p>
+          </Link>
+        );
+      })}
     </>
   );
 }
