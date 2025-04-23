@@ -4,7 +4,7 @@ import {
   UserGroupIcon,
   InboxIcon,
 } from "@heroicons/react/24/outline";
-import { SecondaryFont } from "../font";
+import { SecondaryFont } from "@/app/ui/font";
 
 const iconMap = {
   collected: BanknotesIcon,
