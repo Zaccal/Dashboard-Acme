@@ -3,12 +3,11 @@ import clsx from "clsx";
 import Image from "next/image";
 import { LatestInvoice } from "@/app/lib/definitions";
 import { SecondaryFont } from "../ui/font";
+import { fetchLatestInvoices } from "../lib/data";
 
-export default async function LatestInvoices({
-  latestInvoices,
-}: {
-  latestInvoices: LatestInvoice[];
-}) {
+export default async function LatestInvoices() {
+  const latestInvoices = await fetchLatestInvoices();
+
   return (
     <div className="flex w-full flex-col md:col-span-4">
       <h2 className={`${SecondaryFont.className} mb-4 text-xl md:text-2xl`}>
