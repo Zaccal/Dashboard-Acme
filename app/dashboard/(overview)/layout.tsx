@@ -1,5 +1,7 @@
 import { ReactElement } from "react";
-import SideNav from "../ui/dashboard/sidenav";
+import SideNav from "@/app/ui/dashboard/sidenav";
+
+export const experimental_ppr = true;
 
 function Layout({ children }: { children: ReactElement }) {
   return (
