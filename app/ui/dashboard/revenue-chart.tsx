@@ -1,7 +1,12 @@
 import { generateYAxis } from "@/app/lib/utils";
 import { CalendarIcon } from "@heroicons/react/24/outline";
+<<<<<<< HEAD:app/dashboard/revenue-chart.tsx
 import { SecondaryFont } from "@/app/ui/font";
 import { fetchRevenue } from "../lib/data";
+=======
+import { Revenue } from "@/app/lib/definitions";
+import { SecondaryFont } from "../font";
+>>>>>>> parent of e4321bc (Complited a dashboard with fetching data):app/ui/dashboard/revenue-chart.tsx
 
 // This component is representational only.
 // For data visualization UI, check out:
@@ -11,20 +16,26 @@ import { fetchRevenue } from "../lib/data";
 
 export default async function RevenueChart({}: {}) {
   const chartHeight = 350;
+<<<<<<< HEAD:app/dashboard/revenue-chart.tsx
   const revenue = await fetchRevenue();
+=======
+  // NOTE: Uncomment this code in Chapter 7
+>>>>>>> parent of e4321bc (Complited a dashboard with fetching data):app/ui/dashboard/revenue-chart.tsx
 
-  const { yAxisLabels, topLabel } = generateYAxis(revenue);
+  // const { yAxisLabels, topLabel } = generateYAxis(revenue);
 
-  if (!revenue || revenue.length === 0) {
-    return <p className="mt-4 text-gray-400">No data available.</p>;
-  }
+  // if (!revenue || revenue.length === 0) {
+  //   return <p className="mt-4 text-gray-400">No data available.</p>;
+  // }
 
   return (
     <div className="w-full md:col-span-4">
       <h2 className={`${SecondaryFont.className} mb-4 text-xl md:text-2xl`}>
         Recent Revenue
       </h2>
-      <div className="rounded-xl bg-gray-50 p-4">
+      {/* NOTE: Uncomment this code in Chapter 7 */}
+
+      {/* <div className="rounded-xl bg-gray-50 p-4">
         <div className="sm:grid-cols-13 mt-0 grid grid-cols-12 items-end gap-2 rounded-md bg-white p-4 md:gap-4">
           <div
             className="mb-6 hidden flex-col justify-between text-sm text-gray-400 sm:flex"
@@ -53,7 +64,7 @@ export default async function RevenueChart({}: {}) {
           <CalendarIcon className="h-5 w-5 text-gray-500" />
           <h3 className="ml-2 text-sm text-gray-500 ">Last 12 months</h3>
         </div>
-      </div>{" "}
+      </div> */}
     </div>
   );
 }

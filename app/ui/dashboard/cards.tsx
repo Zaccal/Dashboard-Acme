@@ -4,8 +4,12 @@ import {
   UserGroupIcon,
   InboxIcon,
 } from "@heroicons/react/24/outline";
+<<<<<<< HEAD:app/dashboard/cards.tsx
 import { SecondaryFont } from "@/app/ui/font";
 import { fetchCardData } from "../lib/data";
+=======
+import { SecondaryFont } from "../font";
+>>>>>>> parent of e4321bc (Complited a dashboard with fetching data):app/ui/dashboard/cards.tsx
 
 const iconMap = {
   collected: BanknotesIcon,
