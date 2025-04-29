@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { Button } from "@/app/ui/button";
 import { updateInvoices } from "@/app/lib/actions";
+import { notFound } from "next/navigation";
 
 export default function EditInvoiceForm({
   invoice,
@@ -18,6 +19,10 @@ export default function EditInvoiceForm({
   invoice: InvoiceForm;
   customers: CustomerField[];
 }) {
+  if (!invoice) {
+    notFound();
+  }
+
   const updateInvoiceWithId = updateInvoices.bind(null, invoice.id);
 
   return (
