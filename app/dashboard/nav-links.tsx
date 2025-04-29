@@ -5,7 +5,6 @@ import {
   HomeIcon,
 } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Home", href: "/dashboard", icon: HomeIcon },
@@ -18,7 +17,7 @@ const links = [
 ];
 
 function NavLinks() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
 
   return (
     <>

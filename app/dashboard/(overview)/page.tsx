@@ -1,5 +1,5 @@
 import { SecondaryFont } from "@/app/ui/font";
-import CardWrapper, { Card } from "@/app/dashboard/cards";
+import CardWrapper from "@/app/dashboard/cards";
 import LatestInvoices from "@/app/dashboard/latest-invoices";
 import RevenueChart from "@/app/dashboard/revenue-chart";
 import { Suspense } from "react";
@@ -9,9 +9,7 @@ import {
   RevenueChartSkeleton,
 } from "@/app/ui/skeletons";
 
-type Props = {};
-
-async function Page({}: Props) {
+async function Page() {
   return (
     <main>
       <h1 className={`${SecondaryFont.className} mb-4 text-xl md:text-2xl`}>

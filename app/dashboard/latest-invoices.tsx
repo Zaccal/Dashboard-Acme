@@ -1,7 +1,6 @@
 import { ArrowPathIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Image from "next/image";
-import { LatestInvoice } from "@/app/lib/definitions";
 import { SecondaryFont } from "../ui/font";
 import { fetchLatestInvoices } from "../lib/data";
 
