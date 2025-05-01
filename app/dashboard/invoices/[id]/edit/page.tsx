@@ -11,7 +11,7 @@ async function Page(props: { params: Promise<{ id: string }> }) {
 
   return (
     <main>
-      <div className="container mt-12">
+      <div>
         {" "}
         <Breadcrumbs
           breadcrumbs={[

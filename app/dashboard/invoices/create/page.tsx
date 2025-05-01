@@ -6,7 +6,7 @@ export default async function Page() {
   const customers = await fetchCustomers();
 
   return (
-    <main className="container mt-12">
+    <main>
       <Breadcrumbs
         breadcrumbs={[
           { label: "Invoices", href: "/dashboard/invoices" },
