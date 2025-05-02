@@ -55,8 +55,9 @@ export async function createInvoices(prevState: State, formData: FormData) {
     VALUES (${customerId}, ${amountOfCents}, ${status}, ${date})
   `;
   } catch (e) {
+    const errorMessage = e instanceof Error ? e.message : "unkown";
     return {
-      message: "Database Error: Failed to Create Invoice",
+      message: `Database Error: Failed to Create Invoice (${errorMessage})`,
     };
   }
   revalidatePath("/dashboard/invoices");
@@ -94,9 +95,10 @@ export async function updateInvoices(
     WHERE id = ${id}
   `;
   } catch (e) {
+    const errorMessage = e instanceof Error ? e.message : "unkown";
     return {
-      message: "Database Error: Failed to Update Invoice",
-    }
+      message: `Database Error: Failed to Update Invoice (${errorMessage})`,
+    };
   }
   revalidatePath("/dashboard/invoices");
   redirect("/dashboard/invoices");
