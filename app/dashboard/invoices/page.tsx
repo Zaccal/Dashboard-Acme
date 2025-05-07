@@ -7,6 +7,11 @@ import { Suspense } from "react";
 import { SecondaryFont } from "@/app/ui/font";
 import { ISearchURL } from "@/app/lib/types/searchURL.type";
 import { fetchInvoicesPages } from "@/app/lib/data";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Invoice Dashboard",
+};
 
 export default async function Page(props: {
   searchParams?: Promise<ISearchURL>;
