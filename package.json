@@ -17,6 +17,7 @@
     "jest-worker": "^29.7.0",
     "next": "15.4.0-canary.7",
     "next-auth": "5.0.0-beta.27",
+    "nextjs-toploader": "^3.8.16",
     "postcss": "8.5.1",
     "postgres": "^3.4.5",
     "react": "latest",

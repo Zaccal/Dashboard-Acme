@@ -2,6 +2,12 @@ import Image from "next/image";
 import Search from "@/app/ui/search";
 import { FormattedCustomersTable } from "@/app/lib/definitions";
 import { SecondaryFont } from "../font";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Customers",
+  description: "List of customers",
+};
 
 export default async function CustomersTable({
   customers,
